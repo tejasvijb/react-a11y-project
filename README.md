@@ -14,6 +14,10 @@ This project contains a **String Calculator template** built using React. The pr
 -   **Responsive Design**: Clean and intuitive UI that works across different screen sizes
 -   **Test**: Achieved 96.32% code coverage. Implemented unit and integration tests
 
+## Deployed link
+
+[Demo link](https://string-number-calculator.netlify.app/)
+
 ## Images
 
 ### Application UI
