@@ -1,34 +1,23 @@
 export const checkInput = (input: string): boolean => {
+    // Check if input is empty or just whitespace
     if (!input || !input.trim()) {
         return false;
     }
 
     const parts = input.split(",");
 
-    for (const part of parts) {
+    // Use every() to check all parts meet our criteria
+    return parts.every((part) => {
         const trimmedPart = part.trim();
 
-        // Check if part is empty (happens with consecutive commas)
-        if (trimmedPart === "") {
-            return false;
-        }
-
-        // Check if part is a valid positive integer
-        if (!/^\d+$/.test(trimmedPart)) {
-            return false;
-        }
-
-        // Check if number is negative or zero
+        // Check for all conditions in one statement
         const num = parseInt(trimmedPart, 10);
-        if (num <= 0) {
-            return false;
-        }
+        const isValid =
+            trimmedPart !== "" && // Not empty
+            /^\d+$/.test(trimmedPart) && // Valid positive integer format
+            num >= 0 && // Greater than or equal to zero
+            num <= 9999999999; // Not exceeding max value
 
-        // Check if number is greater than 9999999999
-        if (num > 9999999999) {
-            return false;
-        }
-    }
-
-    return true;
+        return isValid;
+    });
 };
