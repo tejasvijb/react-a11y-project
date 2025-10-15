@@ -1,45 +1,80 @@
 import { useState } from 'react';
+import './App.css';
+import { sumStringNumbers, checkInput } from './utils/stringCalculator';
 
 const App = () => {
   const [input, setInput] = useState('');
-  const [result] = useState(null);
+  const [result, setResult] = useState<string | null>(null);
+  const [error, setError] = useState(false);
 
-  const handleCalculate = () => {};
+  const handleCalculate = () => {
+    // Reset error state
+    setError(false);
+
+    try {
+      // Check if input is valid first
+      if (!checkInput(input)) {
+        setError(true);
+        setResult(null);
+        return;
+      }
+
+      // Calculate sum using the utility function
+      const sum = sumStringNumbers(input);
+      setResult(sum);
+    } catch {
+      // Any error in calculation will set the error state
+      setError(true);
+      setResult(null);
+    }
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setInput(e.target.value);
+  }
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    handleCalculate();
+  }
 
   return (
-    <div style={{ padding: '20px', backgroundColor: '#fff', color: '#aaa' }}>
+    <div className="app-container">
       <img
         src='https://images.unsplash.com/photo-1594352161389-11756265d1b5?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
         width={600}
         height={400}
+        role='img'
+        alt='spool of thread'
       />
 
-      <h2>String Calculator</h2>
+      <header><h2>String Calculator</h2></header>
 
-      <h1 style={{ fontSize: '20px' }}>Enter numbers</h1>
+      <form onSubmit={handleSubmit} className="calculator-form">
+        <label data-testid='label' htmlFor="number-input" className="input-label">Enter numbers separated by comma</label>
+        <textarea
+          id="number-input"
+          data-testid="number-input"
+          className="input-textarea"
+          placeholder='Enter numbers'
+          value={input}
+          onChange={handleInputChange}
+          rows={4}
+        />
+        <button
+          onClick={handleCalculate}
+          data-testid='button'
+          className="calculate-button">
+          Calculate
+        </button>
+      </form>
 
-      <textarea
-        style={{ margin: '10px 0', color: '#aaa' }}
-        placeholder='Enter numbers'
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-      />
-
-      <div
-        onClick={handleCalculate}
-        style={{
-          padding: '10px',
-          backgroundColor: '#008cba',
-          color: '#fff',
-          border: 'none',
-        }}>
-        Calculate
+      <div role="alert" className="error-message">
+        {error && <p>Make sure you enter numbers correctly!</p>}
       </div>
 
-      {result !== null && <p style={{ color: 'green' }}>Result: {result}</p>}
-
-      <div role='alert'>
-        <p>Make sure you enter numbers correctly!</p>
+      <div role="status" aria-live="polite">
+        {result && <p>Result: {result}</p>}
       </div>
     </div>
   );
