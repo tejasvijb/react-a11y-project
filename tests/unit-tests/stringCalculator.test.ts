@@ -151,7 +151,7 @@ describe("sumStringNumbers function", () => {
             sumStringNumbers(
                 "99999999999999999999,88888888888888888888, 99999999998899999"
             )
-        ).toBe("188888888888888888887");
+        ).toBe("188988888888887788886");
     });
 
     it("throws error for invalid input", () => {
