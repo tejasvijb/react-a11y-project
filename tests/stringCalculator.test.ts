@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { checkInput } from "../src/utils/stringCalculator";
 
-describe("checkInput", () => {
+describe("Check for valid input", () => {
     const validInputs = [
         "1",
         "1,2,3",
@@ -34,6 +34,9 @@ describe("checkInput", () => {
         "123abc, 456, adsf",
         "asdf",
         "1, 2, three",
+        "1 2 3,  45 6",
+        "4 5",
+        "123, 45 6",
     ];
 
     validInputs.forEach((input) => {
