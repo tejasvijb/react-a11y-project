@@ -111,7 +111,19 @@ textarea:focus {
 }
 
 /* Result display */
-[role="status"] {
+[role="status"] p {
+  background-color: #f0f7fa;
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 20px;
+  font-size: 18px;
+  margin: 0;
+  color: #006064;
+  font-weight: 500;
+}
+
+
+[role="alert"] p {
   background-color: #f0f7fa;
   padding: 15px;
   border-radius: 6px;
@@ -119,11 +131,7 @@ textarea:focus {
   font-size: 18px;
 }
 
-[role="status"] p {
-  margin: 0;
-  color: #006064;
-  font-weight: 500;
-}
+
 
 /* Error message */
 .error-message {
@@ -136,9 +144,4 @@ textarea:focus {
   margin: 0;
   display: flex;
   align-items: center;
-}
-
-.error-message p:before {
-  content: "⚠️";
-  margin-right: 8px;
 }

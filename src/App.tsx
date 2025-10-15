@@ -7,6 +7,7 @@ const App = () => {
   const [result, setResult] = useState<string | null>(null);
   const [error, setError] = useState(false);
 
+
   const handleCalculate = () => {
     // Reset error state
     setError(false);
@@ -76,11 +77,11 @@ const App = () => {
       </form>
 
       <div role="alert" aria-live="assertive" aria-atomic="true">
-        {error && <p key={error ? "true" : "false"}>Make sure you enter numbers correctly!</p>}
+        {error && <p className='error-message'>Make sure you enter numbers correctly!</p>}
       </div>
 
       <div role="status" aria-live="polite" aria-atomic="true">
-        {result !== null && <p key={result}>Result: {result}</p>}
+        {result !== null && <p >Result: {result}</p>}
       </div>
     </div>
   );
