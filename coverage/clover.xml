@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1760553729188" clover="3.2.0">
+  <project timestamp="1760553729189" name="All files">
+    <metrics statements="54" coveredstatements="52" conditionals="28" coveredconditionals="27" methods="8" coveredmethods="8" elements="90" coveredelements="87" complexity="0" loc="54" ncloc="54" packages="2" files="2" classes="2"/>
+    <package name="src">
+      <metrics statements="20" coveredstatements="18" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
+      <file name="App.tsx" path="C:/Users/Tejas/OneDrive/Documents/projects/react-a11y/src/App.tsx">
+        <metrics statements="20" coveredstatements="18" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="97" type="stmt"/>
+        <line num="7" count="97" type="stmt"/>
+        <line num="8" count="97" type="stmt"/>
+        <line num="11" count="97" type="stmt"/>
+        <line num="13" count="26" type="stmt"/>
+        <line num="15" count="26" type="stmt"/>
+        <line num="17" count="26" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="12" type="stmt"/>
+        <line num="19" count="12" type="stmt"/>
+        <line num="20" count="12" type="stmt"/>
+        <line num="24" count="14" type="stmt"/>
+        <line num="25" count="14" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="34" count="97" type="stmt"/>
+        <line num="35" count="64" type="stmt"/>
+        <line num="38" count="97" type="stmt"/>
+        <line num="39" count="13" type="stmt"/>
+        <line num="40" count="13" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.utils">
+      <metrics statements="34" coveredstatements="34" conditionals="24" coveredconditionals="23" methods="4" coveredmethods="4"/>
+      <file name="stringCalculator.ts" path="C:/Users/Tejas/OneDrive/Documents/projects/react-a11y/src/utils/stringCalculator.ts">
+        <metrics statements="34" coveredstatements="34" conditionals="24" coveredconditionals="23" methods="4" coveredmethods="4"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="3" count="106" type="cond" truecount="4" falsecount="0"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="7" count="99" type="stmt"/>
+        <line num="10" count="99" type="stmt"/>
+        <line num="11" count="203" type="stmt"/>
+        <line num="14" count="203" type="stmt"/>
+        <line num="16" count="203" type="cond" truecount="5" falsecount="0"/>
+        <line num="21" count="203" type="stmt"/>
+        <line num="27" count="117" type="stmt"/>
+        <line num="28" count="117" type="stmt"/>
+        <line num="29" count="117" type="stmt"/>
+        <line num="30" count="117" type="stmt"/>
+        <line num="32" count="117" type="cond" truecount="3" falsecount="0"/>
+        <line num="33" count="455" type="cond" truecount="2" falsecount="0"/>
+        <line num="34" count="455" type="cond" truecount="2" falsecount="0"/>
+        <line num="35" count="455" type="stmt"/>
+        <line num="36" count="455" type="stmt"/>
+        <line num="37" count="455" type="stmt"/>
+        <line num="38" count="455" type="stmt"/>
+        <line num="39" count="455" type="stmt"/>
+        <line num="42" count="117" type="stmt"/>
+        <line num="46" count="43" type="cond" truecount="2" falsecount="0"/>
+        <line num="47" count="7" type="stmt"/>
+        <line num="50" count="36" type="stmt"/>
+        <line num="51" count="36" type="stmt"/>
+        <line num="52" count="36" type="stmt"/>
+        <line num="54" count="36" type="stmt"/>
+        <line num="56" count="385" type="cond" truecount="4" falsecount="0"/>
+        <line num="57" count="94" type="stmt"/>
+        <line num="58" count="94" type="cond" truecount="1" falsecount="1"/>
+        <line num="59" count="94" type="stmt"/>
+        <line num="61" count="385" type="stmt"/>
+        <line num="64" count="36" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
