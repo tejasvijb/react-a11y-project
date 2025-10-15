@@ -15,9 +15,13 @@ export const checkInput = (input: string): boolean => {
         const isValid =
             trimmedPart !== "" && // Not empty
             /^\d+$/.test(trimmedPart) && // Valid positive integer format
-            num >= 0 && // Greater than or equal to zero
-            num <= 9999999999; // Not exceeding max value
+            num >= 0; // Greater than or equal to zero
 
         return isValid;
     });
 };
+
+// Helper to add two numeric strings
+export function addTwoStrings(a: string, b: string): string {
+    return Number(a) + Number(b) + "";
+}
