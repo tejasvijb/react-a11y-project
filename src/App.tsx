@@ -16,12 +16,14 @@ const App = () => {
       if (!checkInput(input)) {
         setError(true);
         setResult(null);
+        setTimeout(() => setResult(sum), 50);
         return;
       }
 
       // Calculate sum using the utility function
       const sum = sumStringNumbers(input);
       setResult(sum);
+
     } catch {
       // Any error in calculation will set the error state
       setError(true);
@@ -56,11 +58,16 @@ const App = () => {
           id="number-input"
           data-testid="number-input"
           className="input-textarea"
-          placeholder='Enter numbers'
+          aria-describedby='feedback-help'
+          placeholder='Enter numbers separated by comma: Example 1,2,3'
           value={input}
           onChange={handleInputChange}
           rows={4}
         />
+        <p id="feedback-help">
+          Please enter numbers in the format:
+          <span aria-label="1 comma 2 comma 3">1, 2, 3</span>
+        </p>
         <button
           onClick={handleCalculate}
           data-testid='button'
@@ -69,12 +76,12 @@ const App = () => {
         </button>
       </form>
 
-      <div role="alert" className="error-message">
-        {error && <p>Make sure you enter numbers correctly!</p>}
+      <div role="alert" aria-live="assertive" aria-atomic="true">
+        {error && <p key={error ? "true" : "false"}>Make sure you enter numbers correctly!</p>}
       </div>
 
-      <div role="status" aria-live="polite">
-        {result && <p>Result: {result}</p>}
+      <div role="status" aria-live="polite" aria-atomic="true">
+        {result !== null && <p key={result}>Result: {result}</p>}
       </div>
     </div>
   );
