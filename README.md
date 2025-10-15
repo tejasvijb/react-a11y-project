@@ -18,6 +18,10 @@ This project contains a **String Calculator template** built using React. The pr
 
 [Demo link](https://string-number-calculator.netlify.app/)
 
+### Demo Video
+
+[Watch the demo video](https://www.awesomescreenshot.com/video/45329395?key=6a914beba331856ef1107c42406abaa6)
+
 ## Images
 
 ### Application UI
@@ -27,10 +31,6 @@ This project contains a **String Calculator template** built using React. The pr
 ### Test Coverage
 
 ![Test Coverage](./images/coverage.png)
-
-### Demo Video
-
-[Watch the demo video](https://www.awesomescreenshot.com/video/45329395?key=6a914beba331856ef1107c42406abaa6)
 
 ## Project Structure
 
