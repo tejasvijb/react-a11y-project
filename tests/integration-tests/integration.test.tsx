@@ -16,7 +16,7 @@ describe("App Integration Tests", () => {
 
     // Get the textarea and button
     const textarea = screen.getByTestId("number-input");
-    const button = screen.getByText(/calculate/i);
+    const button = screen.getByTestId("button");
 
     // Enter valid numbers
     await user.click(textarea);
@@ -37,7 +37,7 @@ describe("App Integration Tests", () => {
 
     // Get the textarea and button
     const textarea = screen.getByTestId("number-input");
-    const button = screen.getByText(/calculate/i);
+    const button = screen.getByTestId("button");
 
     // Enter invalid input (letters)
     await user.click(textarea);
@@ -57,7 +57,7 @@ describe("App Integration Tests", () => {
     const user = userEvent.setup();
 
     // Get the button
-    const button = screen.getByText(/calculate/i);
+    const button = screen.getByTestId("button");
 
     // Leave the textarea empty
     await user.click(button);
@@ -79,6 +79,7 @@ describe("App Integration Tests", () => {
     await user.click(textarea);
     await user.keyboard("5,10");
 
+    await user.tab();
     // Press Enter to submit
     await user.keyboard("{Enter}");
 
@@ -94,7 +95,7 @@ describe("App Integration Tests", () => {
 
     // Get the textarea and button
     const textarea = screen.getByTestId("number-input");
-    const button = screen.getByText(/calculate/i);
+    const button = screen.getByTestId("button");
 
     // Enter large numbers that would cause precision issues in normal JS addition
     await user.click(textarea);
@@ -119,7 +120,7 @@ describe("App Integration Tests", () => {
 
     // Get the textarea and button
     const textarea = screen.getByTestId("number-input");
-    const button = screen.getByText(/calculate/i);
+    const button = screen.getByTestId("button");
 
     // Enter valid numbers
     await user.click(textarea);
@@ -144,7 +145,7 @@ describe("App Integration Tests", () => {
 
     // Get the textarea and button
     const textarea = screen.getByTestId("number-input");
-    const button = screen.getByText(/calculate/i);
+    const button = screen.getByTestId("button");
 
     // First enter invalid input
     await user.click(textarea);
@@ -174,7 +175,7 @@ describe("App Integration Tests", () => {
 
     // Get the textarea and button
     const textarea = screen.getByTestId("number-input");
-    const button = screen.getByText(/calculate/i);
+    const button = screen.getByTestId("button");
 
     // Enter numbers with leading zeros (which should be invalid according to checkInput)
     await user.click(textarea);
@@ -207,7 +208,7 @@ describe("App Integration Tests", () => {
 
     // Get the textarea and button
     const textarea = screen.getByTestId("number-input");
-    const button = screen.getByText(/calculate/i);
+    const button = screen.getByTestId("button");
 
     // Enter numbers with spaces
     await user.click(textarea);
