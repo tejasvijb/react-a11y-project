@@ -16,7 +16,6 @@ const App = () => {
       if (!checkInput(input)) {
         setError(true);
         setResult(null);
-        setTimeout(() => setResult(sum), 50);
         return;
       }
 

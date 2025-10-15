@@ -138,7 +138,7 @@ describe("App Component Accessibility Tests", () => {
     const textarea = screen.getByRole("textbox");
 
     // Check for placeholder
-    expect(textarea).toHaveAttribute("placeholder", "Enter numbers");
+    expect(textarea).toHaveAttribute("placeholder", "Enter numbers separated by comma: Example 1,2,3");
 
     // Check that rows attribute is set for better accessibility
     expect(textarea).toHaveAttribute("rows");
