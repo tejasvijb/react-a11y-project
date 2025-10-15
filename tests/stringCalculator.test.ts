@@ -10,6 +10,8 @@ describe("checkInput", () => {
         "10,20,300",
         "9999999999",
         "1,9999999999",
+        "0,1,2",
+        "0",
     ];
 
     const invalidInputs = [
@@ -17,7 +19,6 @@ describe("checkInput", () => {
         "   ",
         "1,a,3",
         "1,-2,3",
-        "0",
         "1,2.5",
         "1,2,",
         ",1,2",
@@ -29,6 +30,10 @@ describe("checkInput", () => {
         "10000000000", // number greater than 9999999999
         "1,10000000000,3",
         "9999999999,10000000000",
+        "abc",
+        "123abc, 456, adsf",
+        "asdf",
+        "1, 2, three",
     ];
 
     validInputs.forEach((input) => {
